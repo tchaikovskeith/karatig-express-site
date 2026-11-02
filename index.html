@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1224">
+  <meta name="description" content="DZRS 96.5 Karatig Express — a Filipino radio broadcasting scriptwriting workspace for news, editorial review, rehearsal, and export.">
+  <title>DZRS 96.5 | Karatig Express — Script Maker</title>
+  <style>
+    :root{--bg:#0c1223;--panel:#141c31;--text:#f4f7ff;--muted:#b2bfd8;--yellow:#ffcc49;--red:#fa6261;--cyan:#59dce6;--line:#2a3755}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 68% 45% at 88% 5%,#213866 0,transparent 62%),radial-gradient(ellipse 48% 38% at 0 48%,#3a2338 0,transparent 69%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.58}
+    a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{height:5px;background:linear-gradient(90deg,var(--red) 0 34%,var(--yellow) 34% 68%,var(--cyan) 68% 100%)}
+    nav{height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:900;letter-spacing:.03em}.logo{height:43px;width:43px;background:var(--yellow);color:#161a29;border:3px solid #111827;box-shadow:5px 5px 0 var(--red);display:grid;place-items:center;font-size:22px;border-radius:9px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.2em;font-weight:800}
+    .navlinks{display:flex;gap:26px;color:#d9e2f4;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.11em}.navlinks a{text-decoration:none}.navlinks a:hover,.navlinks a:focus-visible{color:var(--yellow)}
+    .hero{padding:75px 0 85px;display:grid;grid-template-columns:1.07fr .93fr;gap:70px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--yellow);font-weight:800;letter-spacing:.22em;font-size:12px}.live-dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 5px #59dce622}
+    h1{font-size:clamp(48px,7vw,87px);line-height:.98;letter-spacing:-.075em;margin:24px 0}.accent{color:var(--yellow)}.red{color:var(--red)}.subhead{max-width:560px;font-size:18px;color:var(--muted);margin:0 0 32px}.actions{display:flex;flex-wrap:wrap;gap:14px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 24px;border-radius:11px;text-decoration:none;font-size:13px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;border:2px solid transparent;transition:transform .15s,background .15s;cursor:pointer}.btn:hover:not([disabled]){transform:translateY(-2px)}.primary{background:var(--yellow);color:#0f1526;box-shadow:5px 5px 0 #d88c29}.secondary{border-color:#46597e;background:transparent;color:var(--text)}.btn:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}.btn[disabled]{cursor:not-allowed;opacity:.58;box-shadow:none}
+    .notice{margin-top:22px;color:#b5c5dd;font-size:12px}.notice strong{color:#e8f4ff}.panel{background:linear-gradient(165deg,#1c2949,#12192e);border:1px solid #3d4e71;border-radius:22px;padding:20px;box-shadow:0 24px 80px #0005;transform:rotate(1deg);position:relative}.panel:after{content:"";position:absolute;width:80px;height:80px;border:8px solid var(--red);border-radius:50%;right:-28px;top:-30px;z-index:-1;opacity:.9}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:14px}.smallcaps{text-transform:uppercase;letter-spacing:.16em;font-weight:900;font-size:11px;color:#9fb1d7}.status-pill{background:#264c4a;color:#9ef7dd;border:1px solid #397c70;border-radius:30px;padding:5px 12px;font-size:10px;font-weight:800}.screen{border:1px solid #364660;border-radius:13px;background:#0a1222;padding:25px 22px}.screen .station{color:var(--cyan);font-size:12px;font-weight:900;letter-spacing:.2em}.screen h2{margin:6px 0 21px;font-size:26px;line-height:1.2;letter-spacing:-.04em}.sc-row{display:grid;grid-template-columns:72px 1fr;gap:18px;padding:12px 0;border-top:1px solid #27334d;font-size:13px}.sc-label{color:var(--yellow);font-size:10px;font-weight:900;letter-spacing:.05em}.sc-text{color:#dce6f5}.meter{display:flex;gap:8px;align-items:center;margin-top:18px}.meter span{height:7px;border-radius:5px;background:var(--yellow)}.meter span:nth-child(1){width:28%}.meter span:nth-child(2){width:20%;background:var(--red)}.meter span:nth-child(3){width:36%;background:var(--cyan)}.meter span:nth-child(4){width:16%;background:#526581}.panel-foot{display:flex;justify-content:space-between;gap:15px;color:#91a4c5;font-size:11px;font-weight:800;padding:17px 4px 0}
+    .section{padding:78px 0}.section-title{font-size:clamp(30px,4vw,46px);letter-spacing:-.055em;line-height:1.12;margin:14px 0 12px}.section-intro{color:var(--muted);max-width:660px;margin:0 0 36px}.kicker{text-transform:uppercase;color:var(--cyan);font-size:12px;font-weight:900;letter-spacing:.22em}.features{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.feature{background:#171f34;border:1px solid #2b3855;border-radius:16px;padding:25px 20px;min-height:215px}.feature .symbol{height:45px;width:45px;background:#273953;border:1px solid #415378;border-radius:12px;display:grid;place-items:center;font-size:25px}.feature h3{font-size:17px;line-height:1.2;margin:22px 0 10px}.feature p{color:var(--muted);font-size:13px;margin:0}
+    .banner{margin:32px auto 66px;background:linear-gradient(110deg,#ffca4e 0%,#ff9e4f 100%);color:#19172b;border-radius:22px;padding:30px 34px;display:flex;align-items:center;justify-content:space-between;gap:25px}.banner h2{font-size:27px;line-height:1.14;margin:0 0 7px;letter-spacing:-.04em}.banner p{margin:0;max-width:600px;font-size:14px}.banner .btn{background:#121b2f;color:white;white-space:nowrap}.banner .btn[disabled]{background:#25283a;color:#c5cbd6;opacity:1}
+    footer{border-top:1px solid #2c3956;padding:34px 0 48px;display:flex;justify-content:space-between;gap:15px;color:#a8b8d5;font-size:12px}.footer-brand{font-weight:800;color:#f3f7ff}.footnote{max-width:620px;color:#899bbd}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:940px){.hero{grid-template-columns:1fr;gap:50px;padding:55px 0 60px}.panel{transform:none;max-width:640px}.features{grid-template-columns:repeat(2,minmax(0,1fr))}.banner{flex-direction:column;align-items:flex-start}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}nav{height:74px}.navlinks{gap:13px;font-size:11px}.brand span{font-size:13px}.hero{padding-top:48px}h1{font-size:clamp(44px,13vw,66px)}.subhead{font-size:16px}.panel{padding:13px}.screen{padding:18px 14px}.features{grid-template-columns:1fr}.feature{min-height:auto}.section{padding:56px 0}.banner{padding:26px 22px}.btn{width:100%}footer{flex-direction:column}.sc-row{grid-template-columns:56px 1fr;gap:10px}}
+  </style>
+</head>
+<body>
+  <div class="topbar" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Karatig Express home"><span class="logo" aria-hidden="true">◉</span><span><small>DZRS 96.5</small>KARATIG EXPRESS</span></a>
+      <div class="navlinks"><a href="#features">Features</a><a href="#access">Access</a></div>
+    </nav>
+    <main>
+      <section class="hero" id="home">
+        <div>
+          <div class="eyebrow"><span class="live-dot"></span> RADIO SCRIPT WORKSPACE</div>
+          <h1>YOUR STORY.<br><span class="accent">YOUR VOICE.</span><br><span class="red">YOUR AIRWAVES.</span></h1>
+          <p class="subhead">Turn verified facts into a Filipino radio broadcasting script. Compose, review, rehearse, and export—built for the discipline and energy of the newsroom.</p>
+          <div class="actions"><a id="launch" class="btn primary" href="#access" aria-describedby="access-note">LAUNCH SCRIPT MAKER <span aria-hidden="true">↗</span></a><a href="#features" class="btn secondary">EXPLORE FEATURES <span aria-hidden="true">↓</span></a></div>
+          <p class="notice" id="access-note"><strong>Access note:</strong> The script maker runs through Google Apps Script. The launch link will be added after its access settings are reviewed.</p>
+        </div>
+        <div class="panel" aria-label="Illustrative broadcast script preview, not an actual editor">
+          <div class="panel-head"><span class="smallcaps">Studio preview • sample only</span><span class="status-pill">● SCRIPT WORKSPACE</span></div>
+          <div class="screen"><div class="station">DZRS 96.5 • KARATIG EXPRESS</div><h2>Balitaktakan para sa Bayan!</h2><div class="sc-row"><span class="sc-label">TECH</span><span class="sc-text">[PLAY ORIGINAL OPENING THEME; FADE UNDER]</span></div><div class="sc-row"><span class="sc-label">ANCHOR 1</span><span class="sc-text">Sa bawat balita, katotohanan ang una!</span></div><div class="sc-row"><span class="sc-label">ANCHOR 2</span><span class="sc-text">Boses ng kabataan, serbisyo sa bayan.</span></div><div class="sc-row"><span class="sc-label">ALL</span><span class="sc-text">Karatig Express!</span></div><div class="meter" aria-hidden="true"><span></span><span></span><span></span><span></span></div></div>
+          <div class="panel-foot"><span>FACTS → SCRIPT → REVIEW</span><span>05:00 REHEARSAL</span></div>
+        </div>
+      </section>
+      <section class="section" id="features">
+        <div class="kicker">FROM FACT SHEET TO BROADCAST</div>
+        <h2 class="section-title">One workspace. Every stage of the script.</h2>
+        <p class="section-intro">Purpose-built tools for student broadcasters and mentors. AI-assisted content must still be fact-checked and evaluated under applicable competition rules.</p>
+        <div class="features">
+          <article class="feature"><div class="symbol" aria-hidden="true">📰</div><h3>Fact inventory</h3><p>Organize verified national, local, sports, showbiz, and advocacy details before writing.</p></article>
+          <article class="feature"><div class="symbol" aria-hidden="true">✦</div><h3>Script generation</h3><p>Develop Filipino radio script drafts with speaker labels and technical cues.</p></article>
+          <article class="feature"><div class="symbol" aria-hidden="true">✓</div><h3>Editorial review</h3><p>Inspect language, repetition, and estimated spoken-word timing.</p></article>
+          <article class="feature"><div class="symbol" aria-hidden="true">↗</div><h3>Export & rehearse</h3><p>Use a five-minute rehearsal clock and export a formatted Google Doc.</p></article>
+        </div>
+      </section>
+      <section class="banner" id="access" aria-labelledby="access-title">
+        <div><div class="smallcaps" style="color:#533821;margin-bottom:8px">THE NEXT BROADCAST STARTS HERE</div><h2 id="access-title">Ready to write your next story?</h2><p>Open the dedicated Karatig Express app when access has been enabled for your Google account.</p></div>
+        <a id="launch-bottom" class="btn" href="#access">OPEN KARATIG EXPRESS ↗</a>
+      </section>
+    </main>
+    <footer><div><span class="footer-brand">DZRS 96.5 · KARATIG EXPRESS</span><div>Developed by Keith Andrei A. Layson</div></div><div class="footnote">This is the public information and launch page. The scriptwriting application is hosted separately on Google Apps Script; GitHub Pages does not process Gemini requests or store API keys.</div></footer>
+  </div>
+  <script>
+    // Add the existing LIVE Google Apps Script WEB APP URL ending in /exec.
+    // Never enter an API key, Script ID, or /dev testing URL here.
+    const APP_URL = '';
+    const allowed = /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec(?:\?.*)?$/;
+    if (allowed.test(APP_URL)) {
+      for (const id of ['launch','launch-bottom']) {
+        const a = document.getElementById(id);
+        a.href = APP_URL;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+      }
+      document.getElementById('access-note').textContent = 'Google sign-in and app access permissions may be required.';
+    } else {
+      for (const id of ['launch','launch-bottom']) {
+        const a = document.getElementById(id);
+        a.setAttribute('aria-disabled', 'true');
+        a.addEventListener('click', event => event.preventDefault());
+        a.style.cursor = 'not-allowed';
+        a.title = 'App launch link not configured yet';
+      }
+      document.getElementById('access-title').textContent = 'App access is being configured';
+    }
+  </script>
+</body>
+</html>
